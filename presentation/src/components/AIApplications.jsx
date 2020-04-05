@@ -20,7 +20,7 @@ class AIApplications extends Component {
   	render() {
 
 	    return (
-	    	<div onHover>
+	    	<div >
 	    		<ClickableOptions options={this.aiApplications} header={this.header}/>
 	    	</div>
 	    )

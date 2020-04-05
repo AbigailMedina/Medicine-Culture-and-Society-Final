@@ -61,8 +61,8 @@ class ClickableOptions extends Component {
 		    		onClick={()=>this.setState({options:this.props.options})}>{header}
 		    	</header>
 		    	
-		    		{content}
-		    	</div>
+		    	{content}
+		    </div>
 	    	</section>
 	    )
 	}

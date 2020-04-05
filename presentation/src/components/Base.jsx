@@ -15,15 +15,15 @@ class Base extends Component {
   	render() {
 	    return (
 	    	<div className={this.state.color}>
-	    		<span onMouseEnter={()=>this.setState({color:"coral-reef"})}>
+	    		<div onMouseEnter={()=>this.setState({color:"coral-reef"})}>
 		    		<AIHistoryTimeline />
-		    	</span>
-		    	<span onMouseEnter={()=>this.setState({ color:"black"})}>
+		    	</div>
+		    	<div onMouseEnter={()=>this.setState({ color:"black"})}>
 		    		<AIToolKit />
-		    	</span>
-		    	<span onMouseEnter={()=>this.setState({ color:"tangerine"})}>
+		    	</div>
+		    	<div onMouseEnter={()=>this.setState({ color:"tangerine"})}>
 		    		<AIApplications />
-		    	</span>
+		    	</div>
 	    	</div>
 	    )
 	}
