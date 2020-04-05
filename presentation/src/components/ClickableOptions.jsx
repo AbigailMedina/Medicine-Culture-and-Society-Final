@@ -8,8 +8,7 @@ class ClickableOptions extends Component {
 		this.options = this.props.options
 		this.state = {
 			options:this.props.options,
-			disableLeft:true,
-			disableRight:this.props.options.length===1
+			circles:true
 		}
 		this.displayOption = this.displayOption.bind(this);
 	}
@@ -17,25 +16,21 @@ class ClickableOptions extends Component {
 	displayOption(index){
 		const currOptions = this.state.options
 		if (currOptions.length===1){
-			this.setState({options:this.props.options})
+			this.setState({circles:true,options:this.props.options})
 		}else{
-			this.setState({options:[currOptions[index]]})	
+			console.log(currOptions,currOptions[index],currOptions[index][1])
+			this.setState({circles:false,options:[currOptions[index][1]]})	
 		}	
 	}
 
 	content(props){
 		const options = this.state.options
-		if (!options){
-			return <div>no options</div>
-		}else{
-			console.log("options:",options)
-		}
 		const map = options.map((item, index) => (
 		    	<div 
 		    		key={index}
-		    		className="circle"
+		    		className={this.state.circles?"circle":""}
 		    		onClick={()=>this.displayOption(index)}>
-		    	{item}</div>
+		    	{(!Array.isArray(item) ?item:item[0])}</div>
 
 			))
 		return (
@@ -58,7 +53,7 @@ class ClickableOptions extends Component {
 
 	    		<header 
 		    		className="has-text-centered  is-size-1" 
-		    		onClick={()=>this.setState({options:this.props.options})}>{header}
+		    		onClick={()=>this.setState({circles:true,options:this.props.options})}>{header}
 		    	</header>
 		    	
 		    	{content}

@@ -6,10 +6,10 @@ class AIApplications extends Component {
 		super(props);
 		
 		this.aiApplications = [
-		'pandemic prediction',
-		'diagnosis',
-		'creating cures',
-		'more?'
+		['pandemic prediction',"extra 1"],
+		['diagnosis',"extra 1"],
+		['creating cures',"extra 1"],
+		['more?',"extra 1"]
 		]
 		this.header = "What Applications are there in healthcare?"
 		this.state = {
