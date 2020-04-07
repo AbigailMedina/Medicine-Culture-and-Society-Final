@@ -1,42 +1,47 @@
 import React, { Component } from 'react'
-
+import Circle from './Circle.jsx'
 class ClickableOptions extends Component {
 	constructor(props) {
 		super(props);
-		//props
-		// this.aiHistory = this.props.aiHistory
-		this.options = this.props.options
+		
 		this.state = {
 			options:this.props.options,
-			circles:true
+			showOne:false,
+			showIndex:0
 		}
-		this.displayOption = this.displayOption.bind(this);
+		this.circleClicked.bind(this)
 	}
 	
-	displayOption(index){
-		const currOptions = this.state.options
-		if (currOptions.length===1){
-			this.setState({circles:true,options:this.props.options})
-		}else{
-			console.log(currOptions,currOptions[index],currOptions[index][1])
-			this.setState({circles:false,options:[currOptions[index][1]]})	
-		}	
+
+	headerClicked(){
+		this.setState({options:this.props.options, showOne:false})
+	}
+	circleClicked(item,index){
+		if(this.state.showOne===false){//currently showing all options
+			this.setState({showIndex:index,showOne:true})
+		}
 	}
 
 	content(props){
-		const options = this.state.options
-		const map = options.map((item, index) => (
-		    	<div 
-		    		key={index}
-		    		className={this.state.circles?"circle":""}
-		    		onClick={()=>this.displayOption(index)}>
-		    	{(!Array.isArray(item) ?item:item[0])}</div>
-
-			))
+		const showIndex = this.state.showIndex;
 		return (
 			<section className="section ">
 				<div className="container  has-text-centered">
-					{map}
+					{(this.state.showOne === true?
+						<Circle 
+				    		options = {this.state.options[showIndex]}
+				    		circleClicked = {()=>{this.circleClicked()}}
+				    	/>:
+				    		(this.state.options.map((item, index) => (
+				    			<Circle 
+						    		key={index}
+						    		options = {item}
+						    		circleClicked = {()=>{this.circleClicked(item,index)}}
+						    		
+						    	/>))
+							)
+						)}
+					
 				</div>
 			</section>
 		    
@@ -53,7 +58,7 @@ class ClickableOptions extends Component {
 
 	    		<header 
 		    		className="has-text-centered  is-size-1" 
-		    		onClick={()=>this.setState({circles:true,options:this.props.options})}>{header}
+		    		onClick={this.headerClicked.bind(this)}>{header}
 		    	</header>
 		    	
 		    	{content}
