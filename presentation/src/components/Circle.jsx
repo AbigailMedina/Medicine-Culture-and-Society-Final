@@ -31,7 +31,7 @@ class Circle extends Component {
 	    return (
 			<div className="circle-container">
     			<div 
-		    		className={ index===0 ? "circle" : ""}
+		    		className={ index===0 ? "circle" : "is-size-2"}
 		    		onClick={()=>{this.clicked()}}>
 		    			{options[index]}
 		    	</div>

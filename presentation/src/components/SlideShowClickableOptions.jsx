@@ -50,7 +50,9 @@ class SlideShowClickableOptions extends Component {
 	    		</div>
 			    <div className="column is-three-quarters level-item is-size-2">
 			    	{(this.props.subHeader ? 
-			    		<header className="is-size-2">{subHeader[this.state.current]}</header>:
+			    		<span>
+			    			<header className="is-size-2">{subHeader[this.state.current]}</header>
+			    		</span>:
 			    		<span></span>)}
 
 			    	{this.props.options[this.state.current]}
@@ -70,7 +72,6 @@ class SlideShowClickableOptions extends Component {
   	render() {
   		const content = this.content();
   		const header = this.props.header;
-  		const subHeader = this.props.subHeader;
 	    return (
 	    	<section className=" section fullScreen" >
 		    	<div className="container ">

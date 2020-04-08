@@ -19,7 +19,7 @@ class AIApplicationsSlideshow extends Component {
 	    return (
 	    	<div >
 	    		<SlideShowClickableOptions 
-		    		subHeader={['treatment','diagnosis','Smart robotic surgery']} 
+		    		subHeader={['Treatment','Diagnosis','Smart robotic surgery']} 
 		    		options={this.aiApplications} header={this.header}/>
 	    	</div>
 	    )

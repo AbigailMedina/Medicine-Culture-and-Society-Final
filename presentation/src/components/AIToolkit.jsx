@@ -10,7 +10,7 @@ class AIToolkit extends Component {
 		['Visual',"A program can take in visual input to differentiate items such as faces, used in facial recognition or recognize lane boundries for self-driving cars"],
 		['Auditory',"A program can take in auditory input used to id a voice as an individual it has heard before or simply take commands like Siri or Alexa"],
 
-		['Types of data', 
+		['Structured vs Unstructured Data', 
 			'Structured data is organized in a way machines can take as input, manipulate and output. One example being data in a csv file from IMDB about movies where movies are related to genres; An AI can analyze patterns in titles and \'learn\' to guess what genre a title might belong to.',
 			'Unstructured data comes in requiring manipulation to become useful in making decisions on. A letter for example- if you hand an AI a letter and tell it to tell you if the author is mad at you, the AI will have to structure the letter into words with associated connotations in order to make this calculation.'],
 		
