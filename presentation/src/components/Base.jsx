@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 import AIHistoryTimeline from './AIHistoryTimeline.jsx'
 import AIToolKit from './AIToolkit.jsx'
-import AIApplications from './AIApplications.jsx'
+import AIToolKit2 from './AIToolkit2.jsx'
+// import AIApplications from './AIApplications.jsx'
+import AIApplicationsSlideShow from './AIApplicationsSlideShow.jsx'
 
 class Base extends Component {
 	constructor(props) {
@@ -16,14 +18,18 @@ class Base extends Component {
 	    return (
 	    	<div className={this.state.color}>
 	    		<div onMouseEnter={()=>this.setState({color:"coral-reef"})}>
-		    		<AIHistoryTimeline />
+		    		<AIHistoryTimeline/>
 		    	</div>
 		    	<div onMouseEnter={()=>this.setState({ color:"black"})}>
 		    		<AIToolKit />
 		    	</div>
-		    	<div onMouseEnter={()=>this.setState({ color:"tangerine"})}>
-		    		<AIApplications />
+		    	<div onMouseEnter={()=>this.setState({ color:"coral-reef"})}>
+		    		<AIToolKit2 />
 		    	</div>
+		    	<div onMouseEnter={()=>this.setState({ color:"black"})}>
+		    		<AIApplicationsSlideShow />
+		    	</div>
+		    	
 	    	</div>
 	    )
 	}

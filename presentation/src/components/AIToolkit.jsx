@@ -4,17 +4,21 @@ import ClickableOptions from './ClickableOptions.jsx'
 class AIToolkit extends Component {
 	constructor(props) {
 		super(props);
-		//props
-		// this.aiHistory = this.props.aiHistory
+		
 		this.aiToolkit = [
-		['NLP',"nlp stuff"],
-		//takes into acount auditory and processing of digital language
-		['Tactile',"One example of AI using tactile input to gain intelligence is being tasked to walk. How does a human learn how to walk? First, a baby that is trying to walk has to be told that it should be learning to walk. This is equivalent to a computer scientist writing a program to tell a robot to walk. Next, both machine and baby have to fall and fail a lot. This is where the learning happens. A baby can't balance because it doesn't know that if it leans forward it will fall. The same holds for a robot. A robot has to make a decision to move as per the program’s instructions and it will either fall or not. The program will maximize successful movements mathematically so that the machine can understand where it went wrong. Same thing happens with a child when it falls and cries or successfully takes a step and gets applause from its parents. "],
-		['Visual',"visual stiuff"]]
-		this.header = "How is it done?"
-		this.state = {
-			
-		}
+		['Tactile',"A program can take in tactile input to learn its way through a maze with no vision or learn to walk based off a goal of minimize falling"],
+		['Visual',"A program can take in visual input to differentiate items such as faces, used in facial recognition or recognize lane boundries for self-driving cars"],
+		['Auditory',"A program can take in auditory input used to id a voice as an individual it has heard before or simply take commands like Siri or Alexa"],
+
+		['Types of data', 
+			'Structured data is organized in a way machines can take as input, manipulate and output. One example being data in a csv file from IMDB about movies where movies are related to genres; An AI can analyze patterns in titles and \'learn\' to guess what genre a title might belong to.',
+			'Unstructured data comes in requiring manipulation to become useful in making decisions on. A letter for example- if you hand an AI a letter and tell it to tell you if the author is mad at you, the AI will have to structure the letter into words with associated connotations in order to make this calculation.'],
+		
+		['Quiz yourself...','Is data understood through Tactile, Visual, or Auditory observations structured or unstructured data?', 'Unstructured']
+		]
+
+		this.header = "How is it done? Step one: taking in data"
+	
 	}
 
   	render() {

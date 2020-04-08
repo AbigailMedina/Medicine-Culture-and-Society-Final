@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Circle from './Circle.jsx'
 class ClickableOptions extends Component {
+	
 	constructor(props) {
 		super(props);
 		

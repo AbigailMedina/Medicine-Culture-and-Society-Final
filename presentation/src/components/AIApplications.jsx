@@ -9,12 +9,10 @@ class AIApplications extends Component {
 		['pandemic prediction',"extra 1"],
 		['diagnosis',"extra 1"],
 		['creating cures',"extra 1"],
-		['more?',"extra 1"]
+		['Smart robotic surgery',"extra 1"]
 		]
 		this.header = "What Applications are there in healthcare?"
-		this.state = {
-			
-		}
+		
 	}
 
   	render() {

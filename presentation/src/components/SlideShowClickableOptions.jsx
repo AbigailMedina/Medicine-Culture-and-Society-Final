@@ -3,8 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 class SlideShowClickableOptions extends Component {
 	constructor(props) {
 		super(props);
-		//props
-		// this.aiHistory = this.props.aiHistory
+		
 		this.options = this.props.options
 		this.state = {
 			current:0,
@@ -37,6 +36,8 @@ class SlideShowClickableOptions extends Component {
 		}
 	}
 	content(props){
+		 const subHeader = this.props.subHeader;
+
 		return (
 
 		    <div className="columns level ">
@@ -48,6 +49,10 @@ class SlideShowClickableOptions extends Component {
 			    		/>
 	    		</div>
 			    <div className="column is-three-quarters level-item is-size-2">
+			    	{(this.props.subHeader ? 
+			    		<header className="is-size-2">{subHeader[this.state.current]}</header>:
+			    		<span></span>)}
+
 			    	{this.props.options[this.state.current]}
 			    </div>
 			    <div className="column level-item level-right is-size-2">
@@ -65,6 +70,7 @@ class SlideShowClickableOptions extends Component {
   	render() {
   		const content = this.content();
   		const header = this.props.header;
+  		const subHeader = this.props.subHeader;
 	    return (
 	    	<section className=" section fullScreen" >
 		    	<div className="container ">
