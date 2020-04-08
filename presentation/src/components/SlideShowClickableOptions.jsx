@@ -73,7 +73,7 @@ class SlideShowClickableOptions extends Component {
   		const content = this.content();
   		const header = this.props.header;
 	    return (
-	    	<section className=" section fullScreen" >
+	    	<section className="section fullScreen slideShow" >
 		    	<div className="container ">
 		    		<header 
 		    			className="is-size-1"

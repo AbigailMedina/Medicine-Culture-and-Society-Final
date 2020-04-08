@@ -1,3 +1,39 @@
+// Small tablets and large smartphones (landscape view)
+$screen-sm-min: 576px;
+
+// Small tablets (portrait view)
+$screen-md-min: 768px;
+
+// Tablets and small desktops
+$screen-lg-min: 992px;
+
+// Large tablets and desktops
+$screen-xl-min: 1200px;
+
+/*Small devices*/
+@mixin sm {
+   @media (min-width: #{$screen-sm-min}) {
+       @content;
+   }
+}
+/*Medium devices*/
+@mixin md {
+   @media (min-width: #{$screen-md-min}) {
+       @content;
+   }
+}
+/*Large devices*/
+@mixin lg {
+   @media (min-width: #{$screen-lg-min}) {
+       @content;
+   }
+}
+/*Extra large devices*/
+@mixin xl {
+   @media (min-width: #{$screen-xl-min}) {
+       @content;
+   }
+}
 .App {
   text-align: center;
   background-color: #090809;
@@ -39,32 +75,65 @@
     transform: rotate(360deg);
   }
 }
+
 header{
   margin-bottom: 2rem;
 }
-.circle {
- /* padding-top: 40%;
-  padding-bottom: 40%;*/
+.circle {/*default to style for small screen*/
   width:100%;
   height:100%;
-  padding-top: 40%;
-  /*line-height: 500px;*/
+  padding-top: 25%;
   border-radius: 50%;
   margin:5px;
-  font-size: 50px;
+  font-size: 10px;
   color: #090809;
   background: #F44E3F;
   text-align: center;
   vertical-align: middle;
+  @include sm {
+    font-size: 10px;
+    padding-top: 25%;
+  }
+  @include md{
+    font-size: 10px;
+    padding-top: 30%;
+  }
+  @include lg{
+    font-size:40px;
+    padding-top:40%;
+  }
 }
 .circle-container{
-/*  width: 20rem;
-  height: auto;*/
-  width:500px;
-  height: 500px;
+  width: 150px;
+  height: 150px;
+  @include sm {
+    width: 150px;
+    height: 150px;
+  }
+  @include md{
+    width: 200px;
+    height: 200px;
+    
+  }@include lg{
+    width: 400px;
+    height: 400px;
+  }
   display: inline-grid;
 }
-
+/*.slideShow{
+  @include sm {
+    font-size: 10px;
+    padding-top: 25%;
+  }
+  @include md{
+    font-size: 10px;
+    padding-top: 30%;
+  }
+  @include lg{
+    font-size:40px;
+    padding-top:40%;
+  }
+}*/
 .my-icon{
   color:#F40000;
 }

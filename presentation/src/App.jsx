@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import './App.scss';
 import Base from './components/Base.jsx'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faArrowRight, faArrowLeft } from '@fortawesome/free-solid-svg-icons'
