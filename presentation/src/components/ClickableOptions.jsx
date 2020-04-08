@@ -58,7 +58,7 @@ class ClickableOptions extends Component {
 	    	<div className="container">
 
 	    		<header 
-		    		className="has-text-centered  is-size-1" 
+		    		className="has-text-centered " 
 		    		onClick={this.headerClicked.bind(this)}>{header}
 		    	</header>
 		    	

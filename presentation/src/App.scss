@@ -78,6 +78,17 @@ $screen-xl-min: 1200px;
 
 header{
   margin-bottom: 2rem;
+  font-size:1rem;
+  font-weight: bold;
+  @include sm {
+    font-size:40px;
+  }
+  @include md{
+    font-size:40px;
+  }
+  @include lg{
+    font-size:60px;
+  }
 }
 .circle {/*default to style for small screen*/
   width:100%;
@@ -120,20 +131,23 @@ header{
   }
   display: inline-grid;
 }
-/*.slideShow{
+.slideShow{
+
   @include sm {
-    font-size: 10px;
-    padding-top: 25%;
+    header{font-size:40px;}
+    font-size: 20px;
   }
   @include md{
-    font-size: 10px;
-    padding-top: 30%;
+    header{font-size:40px;}
+    font-size: 30px;
+
   }
   @include lg{
+    header{font-size:60px;}
     font-size:40px;
-    padding-top:40%;
+
   }
-}*/
+}
 .my-icon{
   color:#F40000;
 }

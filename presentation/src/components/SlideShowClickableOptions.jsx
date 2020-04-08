@@ -40,24 +40,24 @@ class SlideShowClickableOptions extends Component {
 
 		return (
 
-		    <div className="columns level ">
-			    <div className="column level-left level-item is-size-2">
+		    <div className="columns level is-mobile  ">
+			    <div className="column level-left level-item">
 					<FontAwesomeIcon 
 						icon="arrow-left"
 			    		className={"icon-4x my-icon " + (this.state.disableLeft?"fa-disabled":"")}
 			    		onClick={(e)=>{this.goLeft(e)}}
 			    		/>
 	    		</div>
-			    <div className="column is-three-quarters level-item is-size-2">
+			    <div className="column is-three-quarters level-item ">
 			    	{(this.props.subHeader ? 
 			    		<span>
-			    			<header className="is-size-2">{subHeader[this.state.current]}</header>
+			    			<header className="">{subHeader[this.state.current]}</header>
 			    		</span>:
 			    		<span></span>)}
 
 			    	{this.props.options[this.state.current]}
 			    </div>
-			    <div className="column level-item level-right is-size-2">
+			    <div className="column level-item level-right ">
 			    	<FontAwesomeIcon 
 			    		icon="arrow-right"
 			    		className={"icon-4x my-icon " + (this.state.disableRight? "fa-disabled":"")}
@@ -73,10 +73,10 @@ class SlideShowClickableOptions extends Component {
   		const content = this.content();
   		const header = this.props.header;
 	    return (
-	    	<section className="section fullScreen slideShow" >
-		    	<div className="container ">
+	    	<section className="section fullScreen " >
+		    	<div className="container slideShow">
 		    		<header 
-		    			className="is-size-1"
+		    			className=""
 		    			onClick={()=>this.setState({current:0})}>{header}
 		    		</header>
 			    	{content}
