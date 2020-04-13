@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import AIHistoryTimeline from './AIHistoryTimeline.jsx'
 import AIToolKit from './AIToolkit.jsx'
 import AIToolKit2 from './AIToolkit2.jsx'
-// import AIApplications from './AIApplications.jsx'
 import AIApplicationsSlideShow from './AIApplicationsSlideShow.jsx'
+import Drawbacks from './Drawbacks.jsx'
 
 class Base extends Component {
 	constructor(props) {
@@ -28,6 +28,9 @@ class Base extends Component {
 		    	</div>
 		    	<div onMouseEnter={()=>this.setState({ color:"black"})}>
 		    		<AIApplicationsSlideShow />
+		    	</div>
+		    	<div onMouseEnter={()=>this.setState({ color:"coral-reef"})}>
+		    		<Drawbacks />
 		    	</div>
 		    	
 	    	</div>

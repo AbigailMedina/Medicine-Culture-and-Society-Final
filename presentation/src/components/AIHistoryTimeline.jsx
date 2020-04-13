@@ -13,12 +13,6 @@ class AIHistoryTimeline extends Component {
 		this.header = "What is Artificial Intelligence?"
 
 	}
-	goLeft(e){
-
-	}
-	goRight(e){
-
-	}
 
   	render() {
 
