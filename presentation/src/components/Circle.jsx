@@ -6,7 +6,7 @@ class Circle extends Component {
 		
 		this.state = {
 			options:this.props.options,
-			index:0,
+			index:this.props.startIndex? 1:0,
 			//represents the index of info for this circle from options to display
 		}
 		this.clicked = this.clicked.bind(this);
@@ -29,9 +29,9 @@ class Circle extends Component {
   		const index = this.state.index;
   		const options = this.state.options;
 	    return (
-			<div className="circle-container">
+			<div className={ index===0 ? "circle-container":""}>
     			<div 
-		    		className={ index===0 ? "circle" : "is-size-2"}
+		    		className={ index===0 ? "circle" : "non-circle-text"}
 		    		onClick={()=>{this.clicked()}}>
 		    			{options[index]}
 		    	</div>

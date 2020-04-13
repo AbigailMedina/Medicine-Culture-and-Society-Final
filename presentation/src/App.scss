@@ -76,20 +76,7 @@ $screen-xl-min: 1200px;
   }
 }
 
-header{
-  margin-bottom: 2rem;
-  font-size:1rem;
-  font-weight: bold;
-  @include sm {
-    font-size:40px;
-  }
-  @include md{
-    font-size:40px;
-  }
-  @include lg{
-    font-size:60px;
-  }
-}
+
 .circle {/*default to style for small screen*/
   width:100%;
   height:100%;
@@ -114,6 +101,7 @@ header{
     padding-top:40%;
   }
 }
+
 .circle-container{
   width: 150px;
   height: 150px;
@@ -131,7 +119,7 @@ header{
   }
   display: inline-grid;
 }
-.slideShow{
+.non-circle-text{
 
   @include sm {
     header{font-size:40px;}

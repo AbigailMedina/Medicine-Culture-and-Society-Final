@@ -32,6 +32,7 @@ class ClickableOptions extends Component {
 						<Circle 
 				    		options = {this.state.options[showIndex]}
 				    		circleClicked = {()=>{this.circleClicked()}}
+				    		startIndex = {this.state.showOne}
 				    	/>:
 				    		(this.state.options.map((item, index) => (
 				    			<Circle 
@@ -54,7 +55,7 @@ class ClickableOptions extends Component {
   		const content = this.content();
   		const header = this.props.header;
 	    return (
-	    	<section className="section fullScreen">
+	    	<section className="section fullScreen non-circle-text">
 	    	<div className="container">
 
 	    		<header 

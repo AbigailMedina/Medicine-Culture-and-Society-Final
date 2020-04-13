@@ -74,9 +74,8 @@ class SlideShowClickableOptions extends Component {
   		const header = this.props.header;
 	    return (
 	    	<section className="section fullScreen " >
-		    	<div className="container slideShow">
+		    	<div className="container non-circle-text">
 		    		<header 
-		    			className=""
 		    			onClick={()=>this.setState({current:0})}>{header}
 		    		</header>
 			    	{content}
