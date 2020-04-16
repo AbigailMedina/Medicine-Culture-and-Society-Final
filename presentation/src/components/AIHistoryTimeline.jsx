@@ -18,7 +18,7 @@ class AIHistoryTimeline extends Component {
 
 	    return (
 	    	<div >
-	    		<SlideShowClickableOptions options={this.aiHistory} header={this.header}/>
+	    		<SlideShowClickableOptions fullScreen ={true} options={this.aiHistory} header={this.header}/>
 	    	</div>
 	    )
 	}

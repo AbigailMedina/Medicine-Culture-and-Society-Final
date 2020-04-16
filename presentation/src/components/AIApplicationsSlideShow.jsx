@@ -19,6 +19,7 @@ class AIApplicationsSlideshow extends Component {
 	    return (
 	    	<div >
 	    		<SlideShowClickableOptions 
+	    			fullScreen ={true}
 		    		subHeader={['Treatment','Diagnosis','Smart robotic surgery']} 
 		    		options={this.aiApplications} header={this.header}/>
 	    	</div>

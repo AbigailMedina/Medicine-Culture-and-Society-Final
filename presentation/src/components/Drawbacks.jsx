@@ -18,7 +18,7 @@ class Drawbacks extends Component {
 
 	    return (
 	    	<div >
-	    		<SlideShowClickableOptions options={this.drawbacks} header={this.header}/>
+	    		<SlideShowClickableOptions fullScreen ={true} options={this.drawbacks} header={this.header}/>
 	    	</div>
 	    )
 	}

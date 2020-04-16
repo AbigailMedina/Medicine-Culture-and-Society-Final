@@ -12,9 +12,7 @@ class AIToolkit extends Component {
 
 		['Structured vs Unstructured Data', 
 			'Structured data is organized in a way machines can take as input, manipulate and output. One example being data in a csv file from IMDB about movies where movies are related to genres; An AI can analyze patterns in titles and \'learn\' to guess what genre a title might belong to.',
-			'Unstructured data comes in requiring manipulation to become useful in making decisions on. A letter for example- if you hand an AI a letter and tell it to tell you if the author is mad at you, the AI will have to structure the letter into words with associated connotations in order to make this calculation.'],
-		
-		['Quiz yourself...','Is data understood through Tactile, Visual, or Auditory observations structured or unstructured data?', 'Unstructured']
+			'Unstructured data comes in requiring manipulation to become useful in making decisions on. A letter for example- if you hand an AI a letter and tell it to tell you if the author is mad at you, the AI will have to structure the letter into words with associated connotations in order to make this calculation.']
 		]
 
 		this.header = "How is it done? Step one: taking in data"
@@ -25,7 +23,7 @@ class AIToolkit extends Component {
 
 	    return (
 	    	<div>
-	    		<ClickableOptions options={this.aiToolkit} header={this.header}/>
+	    		<ClickableOptions fullScreen ={true} options={this.aiToolkit} header={this.header}/>
 	    	</div>
 	    )
 	}

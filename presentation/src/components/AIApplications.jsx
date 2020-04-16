@@ -19,7 +19,7 @@ class AIApplications extends Component {
 
 	    return (
 	    	<div >
-	    		<ClickableOptions options={this.aiApplications} header={this.header}/>
+	    		<ClickableOptions fullScreen ={true} options={this.aiApplications} header={this.header}/>
 	    	</div>
 	    )
 	}

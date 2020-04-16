@@ -35,6 +35,10 @@ $screen-xl-min: 1200px;
    }
 }
 .App {
+  font-family: sansPro;
+  b{
+  font-family:sansProBold;
+  }
   text-align: center;
   background-color: #090809;
   color:#F4998D;
@@ -45,6 +49,21 @@ $screen-xl-min: 1200px;
   height: 40vmin;
   pointer-events: none;
 }
+@font-face {
+  font-family: 'Neoteric';
+  src: local('Neoteric'), url(./fonts/Neoteric-32A8.ttf) format('truetype');
+}@font-face {
+  font-family: 'NeotericBold';
+  src: local('NeotericBold'), url(./fonts/NeotericBold-xq1q.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'sansPro';
+  src: local('sansPro'), url(./fonts/SourceSansPro-Regular.ttf) format('truetype');
+}@font-face {
+  font-family: 'sansProBold';
+  src: local('sansProBold'), url(./fonts/SourceSansPro-SemiBoldItalic.ttf) format('truetype');
+}
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -101,6 +120,10 @@ $screen-xl-min: 1200px;
     padding-top:40%;
   }
 }
+.border{
+    border-style: double;
+
+}
 
 .circle-container{
   width: 150px;
@@ -122,16 +145,19 @@ $screen-xl-min: 1200px;
 .non-circle-text{
 
   @include sm {
-    header{font-size:40px;}
+    header{font-size:40px;
+    font-family:NeotericBold;}
     font-size: 20px;
   }
   @include md{
-    header{font-size:40px;}
+    header{font-size:40px;
+    font-family:NeotericBold;}
     font-size: 30px;
 
   }
   @include lg{
-    header{font-size:60px;}
+    header{font-size:60px;
+    font-family:NeotericBold;}
     font-size:40px;
 
   }
@@ -140,8 +166,26 @@ $screen-xl-min: 1200px;
   color:#F40000;
 }
 .fa-disabled {
-  opacity: 0.6;
+  opacity: 0.2;
   cursor: not-allowed;
+}
+hr{
+    text-align: center;
+    width: 70%;
+    display: inline-block;
+    background-color:black;
+}
+.navbar{
+  .neo{
+    font-family:NeotericBold;
+    font-size:30px;
+    text-align:left;
+  }
+  background: white-smoke;
+  padding:1em;
+  width: 100%;
+  color:#090809;
+  display:block;
 }
 
 .fullScreen {

@@ -26,12 +26,13 @@ class ClickableOptions extends Component {
 	content(props){
 		const showIndex = this.state.showIndex;
 		return (
-			<section className="section ">
-				<div className="container  has-text-centered">
+			<section className={`section ${this.state.showOne? 'border':""}`}>
+				<div className="container has-text-centered">
 					{(this.state.showOne === true?
 						<Circle 
 				    		options = {this.state.options[showIndex]}
 				    		circleClicked = {()=>{this.circleClicked()}}
+				    		resetChoices = {()=>this.headerClicked()}
 				    		startIndex = {this.state.showOne}
 				    	/>:
 				    		(this.state.options.map((item, index) => (
@@ -55,7 +56,7 @@ class ClickableOptions extends Component {
   		const content = this.content();
   		const header = this.props.header;
 	    return (
-	    	<section className="section fullScreen non-circle-text">
+	    	<section className={`section ${this.props.fullScreen?'fullScreen':""} non-circle-text`}>
 	    	<div className="container">
 
 	    		<header 

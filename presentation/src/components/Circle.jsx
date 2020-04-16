@@ -20,6 +20,7 @@ class Circle extends Component {
 			this.setState({index:index+1})	
 		}
 		else{
+			this.props.resetChoices()
 			this.setState({index:0})
 		}
 		this.props.circleClicked()//to display only this circle

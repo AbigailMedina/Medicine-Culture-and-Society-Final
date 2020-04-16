@@ -6,8 +6,8 @@ class AIToolkit2 extends Component {
 		super(props);
 		
 		this.aiToolkit2 = [
-		['Natural Language Processing',"Natural Language processing is the use of unstructured language-based data in the form of text or audio that AI can process into structured data it can use to make decisions."],
-		['Machine Learning','Machine Learning (ML) is a technique focused on analyzing structured data such as a csv of data representing relationships between traits'],
+		['Natural Language Processing',"Natural Language processing (NLP) is one major category of AI devices. It is the use of unstructured language-based data in the form of text or audio that AI can process into structured data it can use to make decisions."],
+		['Machine Learning','Machine Learning (ML) is one major category of AI devices and is a technique focused on analyzing structured data such as a csv of data representing relationships between traits'],
 		
 		['Learning Types','Reinforcement learning: the machine learned through trial and error and feedback it gained from those trials.',
 							'Supervised learning gives the machine labels for known solutions to a problem to guide the machine when it is learning.', 
@@ -23,7 +23,7 @@ class AIToolkit2 extends Component {
 
 	    return (
 	    	<div>
-	    		<ClickableOptions options={this.aiToolkit2} header={this.header}/>
+	    		<ClickableOptions fullScreen ={true} options={this.aiToolkit2} header={this.header}/>
 	    	</div>
 	    )
 	}
