@@ -6,7 +6,7 @@ class AIToolkit extends Component {
 		super(props);
 		
 		this.aiToolkit = [
-		['Tactile',"A program can take in tactile input to learn its way through a maze with no vision or learn to walk based off a goal of minimize falling"],
+		['Tactile',"A program can take in tactile input to learn its way through a maze with no vision or learn to walk based off a goal to minimize falling"],
 		['Visual',"A program can take in visual input to differentiate items such as faces, used in facial recognition or recognize lane boundries for self-driving cars"],
 		['Auditory',"A program can take in auditory input used to id a voice as an individual it has heard before or simply take commands like Siri or Alexa"],
 

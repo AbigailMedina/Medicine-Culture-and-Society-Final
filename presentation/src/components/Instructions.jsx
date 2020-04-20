@@ -7,7 +7,7 @@ class Instructions extends Component {
 		super(props);
 		
 		this.slideShowInstructions = [
-		'Click on either arrow to look at related info. Faded arrow means that there is no more info to be seen in that direction.',
+		'Click on either arrow to look at related info. A faded arrow means that there is no more info to be seen in that direction.',
 		'This is more info. Click left to return to first slide. Scroll down for the rest of the presentation',
 		'Notice the right arrow is faded, meaning there is not another slide following this'
 		]
